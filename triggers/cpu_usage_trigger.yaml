@@ -1,0 +1,9 @@
+---
+name: linux_vm.cpu_sensor
+description: Triggered when CPU usage on a Linux VM exceeds the threshold
+payload_schema:
+  type: object
+  properties:
+    cpu_usage:
+      type: number
+

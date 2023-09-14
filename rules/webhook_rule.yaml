@@ -1,0 +1,14 @@
+name: webhook_rule
+pack: jarvisops
+description: Rule for handling webhook requests
+enabled: true
+trigger:
+  type: jarvisops.webhook
+criteria: {}
+action:
+  ref: jarvisops.webhook_handler
+  parameters:
+    method: "{{trigger.parameters.method}}"
+    headers: "{{trigger.parameters.headers}}"
+    body: "{{trigger.parameters.body}}"
+

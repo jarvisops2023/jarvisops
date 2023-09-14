@@ -1,0 +1,9 @@
+---
+name: run_script
+description: Run a custom shell script
+enabled: true
+runner_type: local-shell-cmd
+parameters:
+  script_path:
+    type: "string"
+    required: true

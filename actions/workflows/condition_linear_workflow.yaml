@@ -1,0 +1,40 @@
+version: 1.0
+
+description: A conditional workflow
+
+input:
+  - condition_param:'A'
+
+tasks:
+  - check_condition:
+      action: core.noop
+      next:
+        - when: <% ctx().condition_param == "A" %>
+          do: taskA
+        - when: <% ctx().condition_param == "B" %>
+          do: taskB
+        - when: <% ctx().condition_param == "C" %>
+          do: taskC
+        - do: defaultTask
+
+  - taskA:
+      action: core.echo
+      input:
+        message: "Task A executed."
+
+  - taskB:
+      action: core.echo
+      input:
+        message: "Task B executed."
+
+  - taskC:
+      action: core.echo
+      input:
+        message: "Task C executed."
+
+  - defaultTask:
+      action: core.echo
+      input:
+        message: "Default task executed."
+output:
+     condition_param = <% ctx(condition_param) %>

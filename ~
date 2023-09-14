@@ -1,0 +1,9 @@
+name: slack_notification
+pack: jarvisops
+description: My StackStorm webhook for Slack
+enable: true
+trigger_types:
+  - "my_webhook_type"
+parameters:
+  message: "Hello from StackStorm!"
+

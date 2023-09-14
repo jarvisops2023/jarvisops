@@ -1,0 +1,3 @@
+---
+class_name: LogMonitorSensor
+entry_point: log_monitor_sensor.py

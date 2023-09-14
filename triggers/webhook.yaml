@@ -1,0 +1,11 @@
+name: webhook
+pack: jarvisops
+description: Trigger for simulating webhooks
+parameters:
+  method:
+    type: string
+  headers:
+    type: object
+  body:
+    type: object
+

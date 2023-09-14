@@ -1,0 +1,17 @@
+---
+name: remote_script
+description: Run a shell script on a remote machine
+enabled: true
+runner_type: remote-shell-script
+entry_point: remote_script.sh
+parameters:
+  hostname:
+    type: "string"
+    required: true
+  username:
+    type: "string"
+    required: true
+  script_path:
+    type: "string"
+    required: true
+

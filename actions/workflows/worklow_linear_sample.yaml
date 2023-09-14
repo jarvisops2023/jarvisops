@@ -1,0 +1,12 @@
+version: 1.0
+description: Sample Orquesta Workflow
+
+input:
+  - message: Hello, World!
+
+tasks:
+  - name: task1
+    action: core.echo
+    input:
+      message: <% ctx(message) %>
+

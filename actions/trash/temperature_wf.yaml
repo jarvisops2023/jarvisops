@@ -1,0 +1,14 @@
+---
+name: workflow_condition_linear_workflow
+description: "My Orquesta workflow that triggers based on input param"
+enabled: true
+runner_type: orquesta
+# Entry point to the Orquesta workflow file, relative to the pack's actions directory.
+entry_point: workflows/condition_linear_workflow.yaml
+
+# Define the input parameter for the workflow.
+parameters:
+  condition_param:
+    type: string
+    description: "Condition parameter (A, B, or C)"
+

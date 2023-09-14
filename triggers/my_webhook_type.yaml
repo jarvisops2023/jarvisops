@@ -1,0 +1,8 @@
+---
+name: my_webhook_type
+pack: jarvisops
+description: My custom webhook trigger type
+payload_info:
+  message:
+    type: string
+

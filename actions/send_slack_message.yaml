@@ -1,0 +1,17 @@
+---
+name: send_slack_message
+pack: jarvisops
+description: Send custom message to Slack from StackStorm action
+enabled: true
+runner_type: python-script
+entry_point: send_slack_message.py
+parameters:
+  webhook_url:
+    type: string
+    description: Slack webhook URL
+    required: true
+    default: https://hooks.slack.com/services/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
+  message:
+    type: string
+    description: what message to send?
+    default: "Hello World!"

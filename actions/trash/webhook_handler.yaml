@@ -1,0 +1,13 @@
+name: webhook_handler
+pack: jarvisops
+description: Action for handling webhook requests
+runner_type: python-script
+entry_point: actions/webhook_handler.py
+parameters:
+  method:
+    type: string
+  headers:
+    type: object
+  body:
+    type: object
+
